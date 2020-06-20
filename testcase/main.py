@@ -7,7 +7,6 @@ import loginInfo
 
 class AmazonTestCase(unittest.TestCase):
     def setUp(self):
-        #self.driver = webdriver.Chrome("C:\Program Files (x86)\chromedriver.exe")
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(1)
         self.driver.maximize_window()
@@ -60,7 +59,6 @@ class AmazonTestCase(unittest.TestCase):
         search_result_page.click_avr_review_element()
         self.driver.implicitly_wait(5)
         self.assertTrue(search_result_page.is_sorting_page_url_matches())
-
 
 
     def tearDown(self):
